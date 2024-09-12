@@ -14,6 +14,8 @@ const BlogSection = () => {
             .then((data) => setBlogs(data))
             .catch((err) => console.log(err))
         console.log(blogs);
+      
+        
 
     }, [])
 
@@ -67,7 +69,7 @@ const BlogSection = () => {
             </Link>
 
             {/* rest all blogs hear */}
-            <div className='grid grid-cols-1 gap-3 md:h-[100vh] md:overflow-y-scroll md:px-3 md:pb-2 '>
+            <div className=' rounded-2xl grid  grid-cols-1 gap-3 md:h-[100vh] md:overflow-y-scroll  md:pb-2 '>
                 {
                     blogs?.slice(2).map((blog) =>
                         <BlogCard key={blog._id} {...blog} />
