@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const checkAuth = async ()=>{
     axios.defaults.withCredentials = true;
-    const res = await axios.get("http://localhost:3100/api/checkAuth",{
+    const res = await axios.get("https://blogyfi.onrender.com/api/checkAuth",{
         withCredentials:true,
     });
     const data = await res.data;

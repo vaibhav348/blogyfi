@@ -68,7 +68,7 @@ const Blog = () => {
       toast.error("Comment should be at least 3 words long");
       return;
     }
-    const res = await axios.post(`http://localhost:3100/api/addComment/${id}`, {
+    const res = await axios.post(`https://blogyfi.onrender.com/api/addComment/${id}`, {
       comment: newComment,
       userName,
       userImage,
@@ -81,7 +81,7 @@ const Blog = () => {
   };
 
   const getComments = async (id) => {
-    const res = await axios.get(`http://localhost:3100/api/getComments/${id}`);
+    const res = await axios.get(`https://blogyfi.onrender.com/api/getComments/${id}`);
     const data = await res.data;
     setBlogComments(data.comments);
   };
@@ -89,7 +89,7 @@ const Blog = () => {
   const updateComment = async (commentId) => {
     try {
       const res = await axios.put(
-        `http://localhost:3100/api/updateComment/${id}/${commentId}`,
+        `https://blogyfi.onrender.com/api/updateComment/${id}/${commentId}`,
         {
           comment: editedComment,
         }
@@ -106,7 +106,7 @@ const Blog = () => {
   const deleteComment = async (commentId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:3100/api/deleteComment/${id}/${commentId}`
+        `https://blogyfi.onrender.com/api/deleteComment/${id}/${commentId}`
       );
       const data = await res.data;
       toast.success(data.message);

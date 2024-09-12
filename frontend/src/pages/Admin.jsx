@@ -17,7 +17,7 @@ const Admin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3100/api/login", {
+      const res = await axios.post("https://blogyfi.onrender.com/api/login", {
         username: e.target.username.value,
         password: e.target.password.value,
       });

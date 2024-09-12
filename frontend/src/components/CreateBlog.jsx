@@ -72,7 +72,7 @@ const CreateBlog = () => {
         return toast.error('Error uploading image.');
       }
       
-      const res = await axios.post('http://localhost:3100/api/createBlog', {
+      const res = await axios.post('https://blogyfi.onrender.com/api/createBlog', {
         title,
         content,
         author: userData.user.username,

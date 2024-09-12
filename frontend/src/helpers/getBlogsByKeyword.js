@@ -4,7 +4,7 @@ import axios from 'axios';
 export const getBlogsByKeyword = async (keyword) => {
   try {
     
-    const res = await axios.get(`http://localhost:3100/api/getBlogsByKeyword/${keyword}`);
+    const res = await axios.get(`https://blogyfi.onrender.com/api/getBlogsByKeyword/${keyword}`);
     console.log("helper");
     
     // Check if the request was successful

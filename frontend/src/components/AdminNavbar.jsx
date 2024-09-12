@@ -38,7 +38,7 @@ const AdminNavbar = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:3100/api/logout', {
+      await fetch('https://blogyfi.onrender.com/api/logout', {
         method: 'POST',
         credentials: 'include',
       });

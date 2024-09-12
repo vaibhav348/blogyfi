@@ -44,7 +44,7 @@ const Register = () => {
       }
 
       console.log(profileImage, username, email, password);
-      const res = await axios.post("http://localhost:3100/api/signup", {
+      const res = await axios.post("https://blogyfi.onrender.com/api/signup", {
         profileImage: uploadedImage.url,
         username,
         email,
