@@ -1,0 +1,64 @@
+# Ignore node_modules directory
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Vercel and local deployment files
+.vercel
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Mac OS system files
+.DS_Store
+
+# Editor-related files
+.vscode/
+.idea/
+*.swp
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Coverage directory for test reports
+coverage/
+
+# Ignore any local database files
+*.sqlite3
+
+# Ignore any static files and assets cache
+.cache/
+.pnp/
+.pnp.js
+
+# Ignore typescript declaration files
+*.tsbuildinfo
+
+# Ignore compiled output
+out/
+
+# Ignore the Next.js build folder (if applicable)
+.next/
+
+# Ignore any custom directories you don’t want to track
+custom_folder/
+
+# Ignore package-lock.json or yarn.lock if you don't want to track the lock file
+# (Not recommended to ignore lock files, it's useful for reproducibility)
+# package-lock.json
+# yarn.lock
