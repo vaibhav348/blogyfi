@@ -200,7 +200,7 @@ const Blog = () => {
               dangerouslySetInnerHTML={{ __html: blog.content }}
             ></p>
           </div>
-          <hr/>
+          <hr />
           <div className="flex mt-5 justify-start items-center gap-3 text-base">
             <img
               src={blog.profileImage ? blog.profileImage : 'https://img.icons8.com/?size=100&id=x2tr2g6eXjMc&format=png&color=000000'}
@@ -233,25 +233,30 @@ const Blog = () => {
             <div>
               {/* ADDING COMMENTS */}
               <div className="flex justify-between items-start gap-3 my-5">
-                {userAuthenticated ? (
-                  <img
-                    src={userImage ? userImage : 'https://img.icons8.com/?size=100&id=x2tr2g6eXjMc&format=png&color=000000'}
-                    alt={`${userName}'s profile`}
-                    className="w-[50px] rounded-full"
-                  />
-                ) : (
-                  <MdAccountCircle className="text-5xl text-gray-600" />
-                )}
                 <div className="flex flex-col w-full gap-3">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="2"
-                    placeholder="Write a comment"
-                    className="md:w-[35vw] rounded-lg py-2 outline-none shadow-md text-base px-3"
-                    value={newComment}
-                    onChange={(e) => setNewComment(e.target.value)}
-                  ></textarea>
+                  <div className="flex  items-center">
+
+                    {userAuthenticated ? (
+                      <img
+                        src={userImage ? userImage : 'https://img.icons8.com/?size=100&id=x2tr2g6eXjMc&format=png&color=000000'}
+                        alt={`${userName}'s profile`}
+                        className="w-[50px] rounded-full"
+                      />
+                    ) : (
+                      <MdAccountCircle className="text-[50px] text-gray-600 rounded-full" />
+
+                    )}
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows="2"
+                      placeholder="Write a comment"
+                      className=" w-full rounded-lg py-2 outline-none shadow-md text-base px-3"
+                      value={newComment}
+                      onChange={(e) => setNewComment(e.target.value)}
+                    ></textarea>
+                  </div>
+
                   <div className="flex gap-3">
                     <button
                       onClick={addComment}
@@ -341,11 +346,12 @@ const Blog = () => {
 
       {/* Scroll to Top Button */}
       <button
-  onClick={scrollToTop}
-  className="fixed bottom-10 right-5 bg-gray-500 text-white rounded-full  px-4 py-1 opacity-80 hover:opacity-100 transition-opacity duration-300 shadow-lg"
->
-  &#8679; {/* Arrow up symbol */}
-</button>
+        onClick={scrollToTop}
+        className="fixed bottom-10 right-4 bg-gray-200 text-gray-700 font-extrabold rounded-full px-2  opacity-80 hover:opacity-100 transition-opacity duration-300 shadow-[0_0_11px_3px_rgba(0,0,0,0.6)]  hover:shadow-[0_0_15px_3px_rgba(0,0,0,0.8)]"
+      >
+        &#8679;
+      </button>
+
 
     </section>
   );

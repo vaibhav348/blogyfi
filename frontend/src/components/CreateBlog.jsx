@@ -84,6 +84,8 @@ const CreateBlog = () => {
 
       const data = await res.data;
       toast.success(data.message);
+      console.log(author);
+      
       setTitle('');
       setThumbnail(null);
       setContent('');

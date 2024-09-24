@@ -52,6 +52,7 @@ const login = async (req, res) => {
         })
         res.cookie("token", token, {
             httpOnly: true,
+            sameSite: 'None',
             secure: true,
         })
         return res.status(200).json({
@@ -69,35 +70,31 @@ const login = async (req, res) => {
     }
 }
 
-const checkAuth = async (req, res) => {
-    const id = req.id;
-    try {
-        const user = await User.findById(id).select("-password");
-        if(!user){
-            return res.status(404).json({
-                success:false,
-                message:"Access denied"
-            })
-        }
-        return res.status(200).json({
-            success:true,
-            message:"user featchd",user
-        })
-    } catch (error) {
-        return res.status(500).json({
-            success: false,
-            message: error.message
-        }
-        )
-    }
-}
 
+const checkAuth = async (req, res) => {
+    console.log("req.id:", req.id); // Add this for debugging
+    if (!req.id) {
+      return res.status(401).json({ success: false, message: "Unauthorized, missing id" });
+    }
+  
+    try {
+      const user = await User.findById(req.id).select("-password");
+      if (!user) {
+        return res.status(404).json({ success: false, message: "User not found" });
+      }
+      return res.status(200).json({ success: true, user });
+    } catch (error) {
+      return res.status(500).json({ success: false, message: error.message });
+    }
+  };
+  
 const logout = (req, res) => {
     try {
         // Clear the token cookie by setting its expiration date to a past date
         res.cookie("token", "", {
             expires: new Date(0), // Set the expiration date to a date in the past
             httpOnly: true,
+            sameSite: 'None',
             secure: true, // Use secure if your application is running over HTTPS
         });
 

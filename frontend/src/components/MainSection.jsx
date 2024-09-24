@@ -13,7 +13,7 @@ const MainSection = () => {
 
 
   return (
-    <section className='pt-32 pb-5 gap-3  md:py-32  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-purple-500 to-90%  md:min-h-[80vh] flex flex-col-reverse 
+    <section className='pt-32 pb-5 gap-3  md:py-40  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-purple-500 to-90%   flex flex-col-reverse 
     md:flex-row justify-between gep-5 px-10  '>
 
       <div className='w-[100%] flex flex-col gap-3 md:w-[50%] '>
@@ -37,7 +37,7 @@ const MainSection = () => {
         <Link
           to={`/blog/${blogs[0]?._id}`}
           className='bg-gradient-to-r  from-teal-300 to-purple-300 hover:from-pink-300 hover:to-orange-300 
-           px-6 py-2 text-xs md:text-sm  rounded-full font-semibold w-fit mt-3   '>
+           px-6 py-2 text-xs md:text-sm  rounded-full font-semibold mr-auto flex justify-start items-start  mt-3   '>
           Read more</Link>
       </div>
 

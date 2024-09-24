@@ -67,10 +67,10 @@ const Register = () => {
   };
 
   return (
-    <div className=' h-screen md:h-full pt-28 pb-8 bg-gradient-to-r from-teal-300 to-purple-300'>
+    <>
+      <div className=' h-auto flex justify-center items-center  bg-gradient-to-r from-teal-300 to-purple-300   '>
       <Navber />
-      <div className='  h-[80%] flex justify-center items-center'>
-        <form onSubmit={handleRegister} className='grid grid-cols-1 bg-zinc-900 w-[80vw] md:w-[40vw] p-3 rounded-lg gap-3 pb-10'>
+        <form onSubmit={handleRegister} className='grid grid-cols-1  mt-40 mb-14 bg-zinc-900 w-[80vw] md:w-[40vw] p-3 rounded-lg gap-3 pb-10'>
           <div className='p-6 flex flex-col justify-center items-center'>
             <h2 className='text-white font-semibold text-base'>Welcome to</h2>
             <h3 className='text-white font-extrabold text-5xl'>Blogify</h3>
@@ -142,7 +142,7 @@ const Register = () => {
           </div>
         </form>
       </div>
-    </div>
+    </>
 
   );
 };
