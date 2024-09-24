@@ -4,7 +4,7 @@ import { convertDate } from '../helpers/convertDate'
 const BlogCard = ({thumbnail, title, tags, _id, createdAt, author, profileImage}) => {
  
   return (
-    <Link to={`/blog/${_id}`} className='relative flex flex-col md:flex-row py-2 gap-3 justify-start items-center md:px-2 rounded-2xl shadow-lg bg-white w-full h-fit'>
+    <Link to={`/blog/${_id}`} className='relative flex flex-col md:flex-row py-2 gap-3 justify-start items-center md:px-2 rounded-2xl shadow-lg bg-gray-100 w-full h-fit'>
         <img src={thumbnail} alt="thumbnail"
         className=' w-[96%] md:w-[20vw] rounded-2xl md:rounded-2xl ' />
         <div className='px-3 w-full md:px-0'>

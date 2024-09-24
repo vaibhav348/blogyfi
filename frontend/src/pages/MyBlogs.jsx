@@ -35,8 +35,8 @@ const MyBlogs = () => {
     return (
         <>
             <Navber />
-            <div className="m-24">
-                <h1 className='text-gray-800 uppercase text-base flex items-center justify-center p-4  mx-2 mb-4  rounded-2xl shadow-md bg-white/10 backdrop-blur-lg border-gray-200 dark:bg-gray-300/20 dark:backdrop-blur-lg'>Your Post  <span className='text-black font-bold pl-1'>
+            <div className="bg-gradient-to-r from-teal-300 to-purple-300  p-2 pt-24  md:p-24">
+                <h1 className='text-gray-800 uppercase text-base flex items-center justify-center p-4  mx-2 mb-4  rounded-xl shadow-md bg-white backdrop-blur-lg border-gray-200 dark:bg-gray-300/20 dark:backdrop-blur-lg'>Your Blogs  <span className='text-black font-bold pl-1'>
                     {owner}
                 </span>
                 </h1>
@@ -51,7 +51,7 @@ const MyBlogs = () => {
                           alt="No posts found" 
                           className="w-auto h-60 rounded-md object-cover mb-4"
                         />
-                        <p className="text-xl font-semibold">No posts found</p>
+                        <p className="text-xl font-semibold">No Blog found</p>
                       </div>
 
 

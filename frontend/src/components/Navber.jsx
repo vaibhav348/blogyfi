@@ -62,12 +62,12 @@ const Navber = () => {
            
             
             <li>
-              <a href="/admin" className="block py-2 flex items-center justify-center h-full text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-purple-300  
+              <a href="/admin" className="block py-2 flex items-center justify-center h-full text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-900 md:p-0 dark:text-white md:dark:hover:text-purple-700  
               
               dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Write</a>
             </li>
             <li>
-            <form className="mx-auto max-w-xl py-1 px-4 rounded-full bg-blue-100 border flex focus-within:border-gray-800">
+            <form className="mx-auto max-w-xl py-1 px-2 pl-4 rounded-full bg-blue-100 border flex focus-within:border-gray-800">
   <input 
     type="text" 
     onChange={(e) => setKeyword(e.target.value)}
@@ -78,13 +78,14 @@ const Navber = () => {
       }
     }}
     placeholder="Search blog..." 
-    className="bg-transparent w-full focus:outline-none font-medium border-0 focus:ring-0 px-0 py-0" 
+    className="bg-transparent text-base w-full focus:outline-none font-medium border-0 focus:ring-0 px-0 py-0" 
     name="topic"
   />
   <Link to={`/blogs?blogs=${keyword}`} className="w-full m-0 md:w-auto">
-    <a className="flex flex-row items-center justify-center min-w-[100px] px-2 rounded-full font-medium tracking-wide border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 font-bold text-base bg-gradient-to-r from-teal-300 to-purple-300 hover:from-pink-300 hover:to-orange-300 text-blue font-medium tracking-wide border-transparent py-1.5 h-[38px] -mr-3">
-      Search
-    </a>
+  <a className="flex items-center justify-center min-w-[100px]  rounded-full font-bold text-base bg-gradient-to-r from-teal-500 to-purple-500 hover:from-pink-500 hover:to-orange-500 text-white py-1.5 h-[38px] transition duration-150">
+  Search
+</a>
+
   </Link>
 </form>
 

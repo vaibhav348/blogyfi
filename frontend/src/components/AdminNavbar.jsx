@@ -70,7 +70,7 @@ const AdminNavbar = () => {
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-100 rounded-lg md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-900 
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 rounded-lg md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-900 
           dark:text-gray-700 dark:hover:bg-gray-100 dark:focus:ring-gray-100"
           aria-controls="navbar-default"
           aria-expanded={isMenuOpen ? 'true' : 'false'}
